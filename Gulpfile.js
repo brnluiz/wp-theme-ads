@@ -28,7 +28,7 @@ gulp.task('build-scss', () => gulp
   .pipe(sourcemaps.init()) // Add the map to modified source.
   .pipe(sass().on('error', sass.logError))
   .pipe(sourcemaps.write()) // Add the map to modified source.
-  .pipe(gulp.dest('.'))
+  .pipe(gulp.dest(assetsPath))
   .pipe(livereload())
 );
 
@@ -80,7 +80,6 @@ gulp.task('build-imgs', () => gulp
 
 gulp.task('build-php', () => gulp
   .src(phpSrcPath)
-  .pipe(gulp.dest('.'))
   .pipe(livereload())
 );
 
