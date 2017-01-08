@@ -15,9 +15,9 @@ const jshint      = require('gulp-jshint');
 // const babelify    = require('babelify');
 // const buffer      = require('vinyl-buffer');
 
-const scssSrcPath = './src/sass/**/*.scss';
-const jsSrcPath   = './src/js/**/*.{js,jsx}';
-const imgSrcPath  = './src/imgs/**/*.{gif,jpg,jpeg,png}';
+const scssSrcPath = './assets/sass/**/*.scss';
+const jsSrcPath   = './assets/js/**/*.{js,jsx}';
+const imgSrcPath  = './assets/imgs/**/*.{gif,jpg,jpeg,png}';
 const phpSrcPath  = './**/*.php';
 
 const assetsPath  = '.';
@@ -54,7 +54,7 @@ gulp.task('build-scss', () => gulp
 // );
 
 gulp.task('build-js', () => gulp
-  .src('src/js/*.js')
+  .src(jsSrcPath)
   .pipe(jshint())
   .pipe(jshint.reporter('fail'))
   .pipe(concat('main.js'))
