@@ -20,16 +20,20 @@
   "homepage": "https://bitbucket.org/brunoluiz/wp-ads#readme",
   "devDependencies": {
     "browser-sync": "^2.18.6",
+    "browserify": "^13.3.0",
     "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-clean-css": "^2.3.2",
     "gulp-concat": "^2.6.1",
     "gulp-imagemin": "^3.1.1",
     "gulp-jshint": "^2.0.4",
-    "gulp-livereload": "^3.8.1",
     "gulp-sass": "^3.0.0",
     "gulp-sourcemaps": "^1.9.1",
+    "gulp-uglify": "^2.0.0",
     "gulp-util": "^3.0.8",
     "jshint": "^2.9.4",
     "node-sass": "^4.1.1",
+    "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0"
   },
   "dependencies": {
