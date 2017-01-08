@@ -36,7 +36,8 @@ const configs = {
     dest: './dist/imgs'
   },
   js: {
-    src: './assets/js/index.js', 
+    src: './assets/js/**/*.{js,jsx}', 
+    main: './assets/js/index.js', 
     dest: './dist/js'
   }
 };
@@ -58,7 +59,7 @@ gulp.task('build-scss', () => gulp
 
 gulp.task('build-js', () => browserify({
     extensions: ['.js', '.jsx'],
-    entries: configs.js.src,
+    entries: configs.js.main,
     paths: ['./node_modules', './assets/js/'],
     debug: true
   })
