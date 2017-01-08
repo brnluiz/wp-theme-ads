@@ -2,10 +2,19 @@ header {
   @extend .row;
   // @extend .expanded;
 
-  border-bottom: 5px solid $text-color;
+  &::after {
+    width: 100%;
+    border-bottom: 3px solid #926e94;
+    border-top: 3px solid #00c4ff;
+    position: absolute;
+    bottom: 0;
+  }
+
   width: 100%;
   padding: 1rem 0;
-
+  overflow: hidden;
+  position: relative;
+  
   a {
     color: $text-color;
     @include on-event() {
