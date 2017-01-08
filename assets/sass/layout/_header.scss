@@ -1,10 +1,10 @@
 header {
   @extend .row;
-  // @extend .expanded;
+  @extend .expanded;
 
   &::after {
     width: 100%;
-    border-bottom: 3px solid #926e94;
+    border-bottom: 3px solid #e4b6e6;
     border-top: 3px solid #00c4ff;
     position: absolute;
     bottom: 0;
@@ -12,6 +12,7 @@ header {
 
   width: 100%;
   padding: 1rem 0;
+  margin-bottom: 1rem;
   overflow: hidden;
   position: relative;
   

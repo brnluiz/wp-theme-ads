@@ -1,3 +1,10 @@
 // -----------------------------------------------------------------------------
 // This file contains styles that are specific to the home page.
 // -----------------------------------------------------------------------------
+
+main {
+  @extend .row;
+  @extend .expanded;
+
+  padding: 0 1rem;
+}
