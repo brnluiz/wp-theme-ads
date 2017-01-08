@@ -46,7 +46,6 @@ gulp.task('build-scss', () => gulp
   .src(configs.scss.src)
   .pipe(sourcemaps.init()) // Add the map to modified source.
     .pipe(sass({
-      errLogToConsole: true,
       outputStyle: 'compact',
     }))
     .pipe(autoprefixer({

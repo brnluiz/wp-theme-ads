@@ -2,10 +2,8 @@
 // This file contains all application-wide Sass variables.
 // -----------------------------------------------------------------------------
 
-@import 'https://fonts.googleapis.com/css?family=Open+Sans|Shadows+Into+Light+Two';
-
-$text-font-stack:  'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
-$title-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+$text-font-stack:  'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+$title-font-stack: 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
 $code-font-stack:  'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
 
 /// Copy text color
