@@ -25,23 +25,25 @@
 	<a class='skip-link screen-reader-text' href='#content' ><?php esc_html_e( 'Skip to content', 'ads' ); ?></a>
 
 	<header id='masthead' role='banner'>
-		<?php
-		if (is_front_page() && is_home()) : ?>
-			<h1 class='site-title'>
-				<a href='<?php echo esc_url(home_url('/')); ?>' rel='home'><?php bloginfo('name'); ?></a>
-			</h1>
-		<?php else : ?>
-			<p class='site-title'>
-				<a href='<?php echo esc_url(home_url('/')); ?>' rel='home'><?php bloginfo('name'); ?></a>
-			</p>
-		<?php endif; ?>
+		<div class='row'>
+			<?php
+			if (is_front_page() && is_home()) : ?>
+				<h1 class='site-title'>
+					<a href='<?php echo esc_url(home_url('/')); ?>' rel='home'><?php bloginfo('name'); ?></a>
+				</h1>
+			<?php else : ?>
+				<p class='site-title'>
+					<a href='<?php echo esc_url(home_url('/')); ?>' rel='home'><?php bloginfo('name'); ?></a>
+				</p>
+			<?php endif; ?>
 
-		<nav id='site-navigation' role='navigation'>
-			<?php wp_nav_menu(array(
-				'theme_location' => 'menu-1', 
-				'menu_id' => 'primary-menu' 
-			)); ?>
-		</nav><!-- #site-navigation -->
+			<nav id='site-navigation' role='navigation'>
+				<?php wp_nav_menu(array(
+					'theme_location' => 'menu-1', 
+					'menu_id' => 'primary-menu' 
+				)); ?>
+			</nav><!-- #site-navigation -->
+		</div>
 	</header><!-- #masthead -->
 
 	<div id='content' class='site-content'>
