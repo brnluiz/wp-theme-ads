@@ -15,13 +15,6 @@ header {
   margin-bottom: 1rem;
   overflow: hidden;
   position: relative;
-  
-  a {
-    color: $text-color;
-    @include on-event() {
-      color: lighten($text-color, 50%);
-    }
-  }
 
   h1 {
     @extend .columns;

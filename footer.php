@@ -14,11 +14,15 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'ads' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'ads' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'ads' ), 'ads', '<a href="https://automattic.com/" rel="designer">Bruno Luiz</a>' ); ?>
-		</div><!-- .site-info -->
+		<div class="contact-info footer-info">
+      <span>ADS Studio</span>
+      <!-- <span>Blumenau, Brazil</span> -->
+      <span><a href='mailto:contato@adsstudio.net'>contato@adsstudio.net</a></span>
+      <span><a href='tel:+5547991542603'>+55 (47) 99154-2603</a></span>
+    </div>
+    <!-- <div class="design-info footer-info">
+			<a href="https://brunoluiz.net/" rel="designer">Designed by Bruno Luiz Silva</a>
+		</div> -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

@@ -1,3 +1,37 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the footer of the site/application.
 // -----------------------------------------------------------------------------
+
+footer {
+  @extend .row;
+
+  text-align: center;
+  font-weight: 400;
+  font-size: .65rem;
+  margin: 2rem auto 0;
+
+  .footer-info {
+    margin-bottom: .5rem;
+
+    &:last-child {
+        margin-bottom: 1rem;
+      }
+
+    span {
+      margin-right: 1rem;
+      &:first-child {
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .contact-info {
+    font-size: .75rem;
+  }
+
+  a { color: #666; }
+}
