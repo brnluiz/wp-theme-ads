@@ -18,7 +18,6 @@ shuffle($widths);
       <?php the_title( '<title class="entry-title">', '</title>' ) ?>
     </div>
     <?php the_post_thumbnail('medium_large') ?>
-    <!-- <img src='http://localhost:8000/example/i/photo/1.jpg' > -->
   </a>
 </article>
 

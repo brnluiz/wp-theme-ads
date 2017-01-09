@@ -1,5 +1,5 @@
 <ul class='menu'>
-  <?php foreach(get_terms(array('taxonomy' => 'skill', 'hide_empty' => false)) as $skill): ?>
+  <?php foreach(get_terms(array('taxonomy' => 'skill', 'hide_empty' => false, 'order' => 'DESC')) as $skill): ?>
   <li class='menu-item'>
     <a href='<?php echo esc_url(home_url('/skills/'.$skill->slug)) ?>'>
       <?php echo $skill->name ?>
