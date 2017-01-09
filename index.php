@@ -14,20 +14,20 @@
 
 get_header(); ?>
 
-		<main id='main' class='site-main' role='main'>
-			<?php query_posts(array('post_type'=>array('project')));
-			if (have_posts()) : ?>
-			
-			<div id='freewall' class='free-wall'>
-			<?php while (have_posts()) : the_post();
-	      get_template_part('assets/views/project', get_post_format());
-	    endwhile; ?>
-			</div>
-			
-			<?php else:
-				get_template_part( 'assets/views/content', 'none' );
-			endif; ?>
-		</main><!-- #main -->
+	<main id='main' class='site-main' role='main'>
+		<?php query_posts(array('post_type'=>array('project')));
+		if (have_posts()) : ?>
+		
+		<div id='freewall' class='free-wall'>
+		<?php while (have_posts()) : the_post();
+      get_template_part('assets/views/project', get_post_format());
+    endwhile; ?>
+		</div>
+		
+		<?php else:
+			get_template_part( 'assets/views/content', 'none' );
+		endif; ?>
+	</main><!-- #main -->
 
 <?php
 // get_sidebar();

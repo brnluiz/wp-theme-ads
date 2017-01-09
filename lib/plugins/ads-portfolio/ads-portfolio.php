@@ -41,7 +41,8 @@ function add_custom_post_type() {
     'show_in_menu'       => true,
     'show_ui'            => true,
     'supports'           => array('title', 'editor', 'thumbnail', 'revisions'),
-    'taxonomies' => array('skill')
+    'taxonomies'         => array('skill'),
+    'rewrite'            => false
   ));
 
   wp_insert_term(

@@ -1,0 +1,50 @@
+main.project-main {
+  @extend .row;
+
+  $height: 75vh;
+  $opacity: .85;
+
+  .banner {
+    @extend .row;
+
+    height: $height;
+    background: rgba(255,255,255,$opacity);
+    position: relative;
+
+    h2 {
+      position: absolute;
+      bottom: 1rem;
+      left: 1rem;
+      font-size: 3rem;
+    }
+    
+    .banner-background {
+      position: absolute;
+      bottom: 0;
+      height: $height;
+      width: 100%;
+      background-image: url('./dist/imgs/header.jpg');
+      background-repeat: none;
+      background-attachment: fixed;
+      background-position: center center;
+      background-size: cover;
+      z-index: -1;
+      display: block;
+    }
+  }
+
+  .content {
+    @extend .row;
+    margin-top: 1rem;
+  }
+
+  .description {
+    @extend .columns;
+    @extend .large-4;
+  }
+
+  .thumbs {
+    @extend .columns;
+    @extend .large-8;
+  }
+}
