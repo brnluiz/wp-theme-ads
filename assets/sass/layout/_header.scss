@@ -2,31 +2,11 @@ header {
   @extend .row;
   @extend .expanded;
 
-  $height: 95vh;
-  $opacity: .95;
-
   width: 100%;
   padding: 1rem 0;
   // margin-bottom: 1rem;
   overflow: hidden;
   position: relative;
-
-  height: $height;
-  background: rgba(255,255,255,$opacity);
-  margin-bottom: 3px;
-
-  &:before {
-    position: absolute;
-    bottom: 0;
-    height: $height;
-    width: 100vw;
-    background-image: url('./dist/imgs/header.jpg');
-    background-repeat: none;
-    background-attachment: fixed;
-    background-position: center center;
-    background-size: cover;
-    z-index: -1;
-  }
 
   h1 {
     margin-top: 0;
@@ -55,7 +35,7 @@ header {
   }
 }
 
-header .pages {
+header.pages {
   h1 {
     @extend .columns;
     @extend .large-2;
@@ -71,7 +51,27 @@ header .pages {
   }
 }
 
-header .landing {
+header.landing {
+  $height: 95vh;
+  $opacity: .95;
+
+  height: $height;
+  background: rgba(255,255,255,$opacity);
+  margin-bottom: 3px;
+
+  &:before {
+    position: absolute;
+    bottom: 0;
+    height: $height;
+    width: 100vw;
+    background-image: url('./dist/imgs/header.jpg');
+    background-repeat: none;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    z-index: -1;
+  }
+
   h1 {
     @extend .row;
     text-align: center;

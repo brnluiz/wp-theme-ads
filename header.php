@@ -24,20 +24,20 @@
 <div id='page' class='site'>
 	<a class='skip-link screen-reader-text' href='#content' ><?php esc_html_e( 'Skip to content', 'ads' ); ?></a>
 
-	<header id='masthead' role='banner'>
+	<?php if (is_front_page() && is_home()) : ?>
+	<header id='masthead' class='landing' role='banner'>
+		<h1 class='site-title'>
+			<a href='<?php echo esc_url(home_url('/')); ?>' rel='home'>
+				<img src='<?php echo get_template_directory_uri() . '/dist/imgs/logo.png' ?>' />
+			</a>
+		</h1>
+		<nav id='site-navigation' role='navigation'>
+			<?php wp_nav_menu(array('theme_location' => 'menu-1', 'menu_id' => 'primary-menu' )) ?>
+		</nav>
+	</header>
+	<?php else: ?>
+	<header id='masthead' class='pages' role='banner'>
 		<div class='row'>
-			<?php if (is_front_page() && is_home()) : ?>
-			<div class='landing'>
-				<h1 class='site-title'>
-					<a href='<?php echo esc_url(home_url('/')); ?>' rel='home'>
-						<img src='<?php echo get_template_directory_uri() . '/dist/imgs/logo.png' ?>' />
-					</a>
-				</h1>
-				<nav id='site-navigation' role='navigation'>
-					<?php wp_nav_menu(array('theme_location' => 'menu-1', 'menu_id' => 'primary-menu' )) ?>
-				</nav>
-			</div>
-			<?php else : ?>
 			<div class='pages'>
 				<p class='site-title'>
 					<a href='<?php echo esc_url(home_url('/')); ?>' rel='home'><?php bloginfo('name'); ?></a>
@@ -46,7 +46,9 @@
 					<?php wp_nav_menu(array('theme_location' => 'menu-1', 'menu_id' => 'primary-menu' )) ?>
 				</nav>
 			</div>
-			<?php endif; ?>
+		</div>
+	</header>
+	<?php endif; ?>
 
 		</div>
 	</header><!-- #masthead -->
