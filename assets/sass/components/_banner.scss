@@ -1,14 +1,16 @@
-$height: 70vh;
-$opacity: .8;
+$banner-height: 70vh;
+$banner-opacity: .8;
 
 .banner {
   @extend .row;
 
-  height: $height;
-  background: rgba(255,255,255,$opacity);
+  margin-bottom: 2rem;
+
+  height: $banner-height;
+  background: rgba(255,255,255,$banner-opacity);
   position: relative;
 
-  h2 {
+  h1, h2 {
     position: absolute;
     bottom: 1rem;
     left: 1rem;
@@ -26,7 +28,7 @@ $opacity: .8;
   .banner-background {
     position: absolute;
     bottom: 0;
-    height: $height;
+    height: $banner-height;
     width: 100%;
     background-image: url('./dist/imgs/header.jpg');
     background-repeat: none;

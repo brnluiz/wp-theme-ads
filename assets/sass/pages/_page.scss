@@ -1,0 +1,8 @@
+$banner-height: 40vh;
+
+.page > .banner {
+  height: $banner-height;
+  .banner-background {
+    height: $banner-height;
+  }
+}
