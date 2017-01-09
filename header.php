@@ -33,7 +33,7 @@
 			</a>
 		</div>
 		<nav id='landing-nav' class='site-nav' role='navigation'>
-			<?php wp_nav_menu(array('theme_location' => 'menu-1', 'menu_id' => 'primary-menu' )) ?>
+			<?php wp_nav_menu(array('theme_location' => 'landing', 'menu_id' => 'primary-menu' )) ?>
 		</nav>
 	</header>
 	<?php else: ?>
@@ -44,7 +44,7 @@
 			</a>
 		</div>
 		<nav id='site-nav' class='site-nav' role='navigation'>
-			<?php wp_nav_menu(array('theme_location' => 'menu-1', 'menu_id' => 'primary-menu' )) ?>
+			<?php wp_nav_menu(array('theme_location' => 'general', 'menu_id' => 'primary-menu' )) ?>
 		</nav>
 	</header>
 	<?php endif; ?>
