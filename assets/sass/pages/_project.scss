@@ -3,7 +3,7 @@ main.project-main {
 
   .content {
     @extend .row;
-    margin-top: 1rem;
+    margin-top: 2rem;
   }
 
   .description {
@@ -27,6 +27,14 @@ main.project-main {
   .thumbs-item {
     @extend .column;
     @extend .column-block;
+
+    img {
+      opacity: 1;
+      transition: .3s;
+      @include on-event {
+        opacity: .5;
+      }
+    }
   }
 
 }

@@ -14,6 +14,8 @@
 @include foundation-menu;
 @include foundation-menu-icon;
 
+@import '../../node_modules/lightbox2/src/css/lightbox.css';
+
 // 1. Configuration and helpers
 @import
   'abstracts/variables',
@@ -39,6 +41,7 @@
 // 5. Components
 @import
   'components/button',
+  'components/lightbox',
   'components/banner';
 
 // 6. Page-specific styles
