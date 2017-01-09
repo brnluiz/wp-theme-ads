@@ -15,33 +15,44 @@ header {
     background: $text-color;
   }
 
-  nav {
-    ul {
-      padding: 0;
-      margin: 0;
+  .menu {
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+  }
+
+  .menu .menu-item, .menu .social-item {
+    list-style: none;
+    display: inline-block;
+
+  }
+
+  .menu .menu-item a {
+    font-weight: 300;
+    padding: 1rem 1rem;
+    margin: 0;
+    transition: .25s;
+    color: $text-color;
+
+    font-family: $title-font-stack;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    @include on-event {
+      background: $text-color;
+      color: #fff;
+      transform: scale(1.07);
     }
+  }
 
-    .menu li {
-      list-style: none;
-      display: inline-block;
-
-      a {
-        font-weight: 300;
-        padding: 1rem 1rem;
-        margin: 0;
-        transition: .25s;
-        color: $text-color;
-
-        font-family: $title-font-stack;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-
-        @include on-event {
-          background: $text-color;
-          color: #fff;
-          transform: scale(1.07);
-        }
-      }
+  .menu .social-item a {
+    font-size: 1.5rem;
+    padding: 0 .5rem 0;
+    color: lighten($text-color, 75%);
+    transition: .3s;
+    @include on-event {
+      color: $text-color;
+      transform: scale(1.10);
     }
   }
 }
@@ -50,15 +61,18 @@ header.header-pages {
   @extend .row;
 
   .site-title {
-    @extend .columns, .large-2;
+    @extend .columns, .large-4;
 
     img {
       height: 48px;
     }
+    .menu {
+      margin-left: 1rem;
+    }
   }
 
   nav {
-    @extend .columns, .large-10;
+    @extend .columns, .large-8;
     ul {
       float: right;
       text-align: right;

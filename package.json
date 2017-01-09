@@ -39,6 +39,7 @@
     "foundation-sites": "^6.3.0",
     "freewall": "^1.0.8",
     "jquery": "^3.1.1",
-    "lightbox2": "^2.9.0"
+    "lightbox2": "^2.9.0",
+    "font-awesome": "^4.7.0"
   }
 }

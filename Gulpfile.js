@@ -39,6 +39,10 @@ const configs = {
     src: './assets/js/**/*.{js,jsx}', 
     main: './assets/js/index.js', 
     dest: './dist/js'
+  },
+  fonts: {
+    src:  './assets/fonts/*', 
+    dest: './dist/fonts'
   }
 };
 
@@ -82,6 +86,11 @@ gulp.task('build-imgs', () => gulp
   .pipe(gulp.dest(configs.imgs.dest)) 
 );
 
+gulp.task('copy-fonts', () => gulp
+  .src(configs.fonts.src)
+  .pipe(gulp.dest(configs.fonts.dest))
+);
+
 // Watch task
 gulp.task('watch', ['default'], () => {
   browserSync.init(configs.sync);
@@ -95,6 +104,7 @@ gulp.task('default', [
   'build-scss',
   'build-imgs',
   'build-js',
+  'copy-fonts'
 ]);
 
 /*

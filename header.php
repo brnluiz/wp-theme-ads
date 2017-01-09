@@ -33,7 +33,9 @@
 			</a>
 		</div>
 		<nav id='landing-nav' class='site-nav' role='navigation'>
-			<?php wp_nav_menu(array('theme_location' => 'landing', 'menu_id' => 'primary-menu' )) ?>
+			<ul>
+				<?php wp_nav_menu(array('theme_location' => 'landing', 'container' => false )) ?>
+			</ul>
 		</nav>
 	</header>
 	<?php else: ?>
@@ -41,10 +43,17 @@
 		<div class='site-title'>
 			<a href='<?php echo esc_url(home_url('/')); ?>' rel='home'>
 				<img src='<?php echo get_template_directory_uri() . '/dist/imgs/logo.png' ?>' />
+				<ul class='menu'>
+					<li class='social-item'><a href='#'><i class='fa fa-pinterest'></i></a></li>
+					<li class='social-item'><a href='#'><i class='fa fa-instagram'></i></a></li>
+					<li class='social-item'><a href='#'><i class='fa fa-youtube'></i></a></li>
+				</ul>
 			</a>
 		</div>
 		<nav id='site-nav' class='site-nav' role='navigation'>
-			<?php wp_nav_menu(array('theme_location' => 'general', 'menu_id' => 'primary-menu' )) ?>
+			<ul class='menu'>
+				<?php wp_nav_menu(array('theme_location' => 'general', 'container' => false, 'items_wrap' => '%3$s' )) ?>
+			</ul>
 		</nav>
 	</header>
 	<?php endif; ?>

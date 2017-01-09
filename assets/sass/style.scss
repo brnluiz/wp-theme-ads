@@ -9,6 +9,8 @@
 @import '//fonts.googleapis.com/css?family=Fjalla+One|Lato:300,400,700.css';
 @import '../../node_modules/lightbox2/src/css/lightbox.css';
 @import '../../node_modules/foundation-sites/scss/foundation';
+@import '../../node_modules/font-awesome/scss/font-awesome';
+
 @include foundation-global-styles;
 @include foundation-grid;
 @include foundation-typography;
