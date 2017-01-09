@@ -14,7 +14,7 @@
 
 get_header(); ?>
 
-	<main id='main' class='site-main' role='main'>
+	<main id='main' class='site-main expanded' role='main'>
 		<?php query_posts(array('post_type'=>array('project')));
 		if (have_posts()) : ?>
 		
