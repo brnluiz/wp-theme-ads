@@ -2,15 +2,33 @@ header {
   @extend .row;
   @extend .expanded;
 
+  $height: 95vh;
+  $opacity: .95;
+
   width: 100%;
   padding: 1rem 0;
   // margin-bottom: 1rem;
   overflow: hidden;
   position: relative;
 
+  height: $height;
+  background: rgba(255,255,255,$opacity);
+  margin-bottom: 3px;
+
+  &:before {
+    position: absolute;
+    bottom: 0;
+    height: $height;
+    width: 100vw;
+    background-image: url('./dist/imgs/header.jpg');
+    background-repeat: none;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    z-index: -1;
+  }
+
   h1 {
-    @extend .columns;
-    @extend .large-2;
     margin-top: 0;
     margin-bottom: 0;
     font-weight: 300;
@@ -18,29 +36,73 @@ header {
   }
 
   nav {
-    @extend .columns;
-    @extend .large-10;
-
     ul {
       padding: 0;
       margin: 0;
-      float: right;
-      text-align: right;
     }
 
     .menu li {
       list-style: none;
+      display: inline-block;
 
       a {
-        &::before {
-          content: "+ ";
-        }
+        // &::before { content: "+ " }
         font-weight: 300;
         padding: 1rem 1rem;
         margin: 0;
       }
     }
+  }
+}
 
+header .pages {
+  h1 {
+    @extend .columns;
+    @extend .large-2;
+  }
+
+  nav {
+    @extend .columns;
+    @extend .large-10;
+    ul {
+      float: right;
+      text-align: right;
+    }
+  }
+}
+
+header .landing {
+  h1 {
+    @extend .row;
+    text-align: center;
+    img {
+      margin-top: 10vh;
+      height: 50vh;
+      margin-bottom: 1rem;
+    }
+  }
+  nav {
+    @extend .row;
+    text-align: center;
+
+    .menu li {
+      a {
+        font-weight: 300;
+        font-size: 3vh;
+        transition: .25s;
+        // background: $text-color;
+        // color: #fff;
+        // min-width: 15vw;
+        color: $text-color;
+        @include on-event {
+          // background: #fff;
+          // color: $text-color;
+          // box-shadow: inset 0 0 0 2px $text-color;
+          background: $text-color;
+          color: #fff;
+        }
+      }
+    }
   }
 }
 

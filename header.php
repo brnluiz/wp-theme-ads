@@ -26,23 +26,28 @@
 
 	<header id='masthead' role='banner'>
 		<div class='row'>
-			<?php
-			if (is_front_page() && is_home()) : ?>
+			<?php if (is_front_page() && is_home()) : ?>
+			<div class='landing'>
 				<h1 class='site-title'>
-					<a href='<?php echo esc_url(home_url('/')); ?>' rel='home'><?php bloginfo('name'); ?></a>
+					<a href='<?php echo esc_url(home_url('/')); ?>' rel='home'>
+						<img src='<?php echo get_template_directory_uri() . '/dist/imgs/logo.png' ?>' />
+					</a>
 				</h1>
+				<nav id='site-navigation' role='navigation'>
+					<?php wp_nav_menu(array('theme_location' => 'menu-1', 'menu_id' => 'primary-menu' )) ?>
+				</nav>
+			</div>
 			<?php else : ?>
+			<div class='pages'>
 				<p class='site-title'>
 					<a href='<?php echo esc_url(home_url('/')); ?>' rel='home'><?php bloginfo('name'); ?></a>
 				</p>
+				<nav id='site-navigation' role='navigation'>
+					<?php wp_nav_menu(array('theme_location' => 'menu-1', 'menu_id' => 'primary-menu' )) ?>
+				</nav>
+			</div>
 			<?php endif; ?>
 
-			<nav id='site-navigation' role='navigation'>
-				<?php wp_nav_menu(array(
-					'theme_location' => 'menu-1', 
-					'menu_id' => 'primary-menu' 
-				)); ?>
-			</nav><!-- #site-navigation -->
 		</div>
 	</header><!-- #masthead -->
 
