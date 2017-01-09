@@ -37,3 +37,13 @@ function ads_pingback_header() {
 	}
 }
 add_action( 'wp_head', 'ads_pingback_header' );
+
+function get_youtube_id($string) {
+	preg_match("/^(?:http(?:s)?:\/\/)?(?:www\.)?(?:m\.)?(?:youtu\.be\/|youtube\.com\/(?:(?:watch)?\?(?:.*&)?v(?:i)?=|(?:embed|v|vi|user)\/))([^\?&\"'>]+)/", $string, $matches);
+	
+	if(!isset($matches[1])) {
+		return false;
+	}
+
+	return $matches[1];
+}

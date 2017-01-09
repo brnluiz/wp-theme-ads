@@ -20,17 +20,26 @@
       <?php the_content() ?>
     </div>
     
-    <div class='gallery'>
-    <?php $images = get_field('gallery'); ?>
-      <div class='thumbs-list'>
-        <?php foreach( $images as $image ): ?>
-        <div class='thumbs-item'>
-          <a href="<?php echo $image['url']; ?>" data-lightbox="gallery">
-            <img src="<?php echo $image['sizes']['medium_large']; ?>" alt="<?php echo $image['alt']; ?>" />
-          </a>
-          <?php // echo $image['caption']; ?>
+    <div class='media'>
+      <?php $youtube = get_field('youtube'); 
+      if($youtube && get_youtube_id($youtube)) : ?>
+      <div class='video'>
+        <iframe src='<?php echo 'https://www.youtube.com/embed/'.get_youtube_id($youtube) ?>' frameborder='0' allowfullscreen></iframe>
+      </div>
+      <?php endif; ?>
+
+      <div class='gallery'>
+      <?php $images = get_field('gallery'); ?>
+        <div class='thumbs-list'>
+          <?php foreach( $images as $image ): ?>
+          <div class='thumbs-item'>
+            <a href="<?php echo $image['url']; ?>" data-lightbox="gallery">
+              <img src="<?php echo $image['sizes']['medium_large']; ?>" alt="<?php echo $image['alt']; ?>" />
+            </a>
+            <?php // echo $image['caption']; ?>
+          </div>
+          <?php endforeach; ?>
         </div>
-        <?php endforeach; ?>
       </div>
     </div>
   </div>
