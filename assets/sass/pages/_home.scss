@@ -58,3 +58,51 @@ main.site-main {
     }
   }
 }
+
+header.header-landing {
+  @extend .row;
+  @extend .expanded;
+
+  $header-height: 95vh;
+  $header-opacity: .9;
+
+  height: $header-height;
+  background: rgba(255,255,255,$header-opacity);
+  margin-bottom: 3px;
+
+  &:before {
+    position: absolute;
+    bottom: 0;
+    height: $header-height;
+    width: 100vw;
+    background-image: url('./dist/imgs/header.jpg');
+    background-repeat: none;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    z-index: -1;
+  }
+
+  .site-title {
+    // @extend .row;
+    // @extend .column;
+    text-align: center;
+    margin: 0 auto;
+    img {
+      margin-top: 10vh;
+      height: 50vh;
+      margin-bottom: 1rem;
+    }
+  }
+  
+  .site-nav {
+    // @extend .row;
+    // @extend .column;
+    text-align: center;
+    margin: 0 auto;
+
+    .menu li a {
+      font-size: 3vh;
+    }
+  }
+}

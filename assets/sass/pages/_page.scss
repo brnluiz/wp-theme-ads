@@ -8,7 +8,7 @@ $banner-height: 40vh;
 }
 
 .entry-content {
-  @extend .columns;
-  @extend .large-10;
-  @extend .large-offset-1;
+  // @extend .columns;
+  @extend .large-8;
+  @extend .large-offset-2;
 }

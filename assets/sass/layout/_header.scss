@@ -1,8 +1,4 @@
 header {
-  @extend .row;
-  @extend .expanded;
-
-  width: 100%;
   padding: 1rem 0;
   // margin-bottom: 1rem;
   overflow: hidden;
@@ -50,10 +46,11 @@ header {
   }
 }
 
-header.pages {
+header.header-pages {
+  @extend .row;
+
   .site-title {
-    @extend .columns;
-    @extend .large-2;
+    @extend .columns, .large-2;
 
     img {
       height: 48px;
@@ -61,8 +58,7 @@ header.pages {
   }
 
   nav {
-    @extend .columns;
-    @extend .large-10;
+    @extend .columns, .large-10;
     ul {
       float: right;
       text-align: right;
@@ -70,46 +66,6 @@ header.pages {
   }
 
   padding: 1.75rem 0;
-}
-
-header.landing {
-  $height: 95vh;
-  $opacity: .9;
-
-  height: $height;
-  background: rgba(255,255,255,$opacity);
-  margin-bottom: 3px;
-
-  &:before {
-    position: absolute;
-    bottom: 0;
-    height: $height;
-    width: 100vw;
-    background-image: url('./dist/imgs/header.jpg');
-    background-repeat: none;
-    background-attachment: fixed;
-    background-position: center center;
-    background-size: cover;
-    z-index: -1;
-  }
-
-  .site-title {
-    @extend .row;
-    text-align: center;
-    img {
-      margin-top: 10vh;
-      height: 50vh;
-      margin-bottom: 1rem;
-    }
-  }
-  nav {
-    @extend .row;
-    text-align: center;
-
-    .menu li a {
-      font-size: 3vh;
-    }
-  }
 }
 
 .screen-reader-text {

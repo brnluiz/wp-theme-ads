@@ -14,15 +14,13 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+	<main id="main" class="site-main" role="main">
 
-			<?php while ( have_posts() ) : the_post();
-				get_template_part( 'assets/views/content', 'page' );
-			endwhile; ?>
+		<?php while ( have_posts() ) : the_post();
+			get_template_part( 'assets/views/content', 'page' );
+		endwhile; ?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+	</main><!-- #main -->
 
 <?php
 get_footer();

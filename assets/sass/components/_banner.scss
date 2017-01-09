@@ -3,6 +3,7 @@ $banner-opacity: .85;
 
 .banner {
   @extend .row;
+  @extend .column;
 
   margin-bottom: 2rem;
 
