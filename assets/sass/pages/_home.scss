@@ -8,6 +8,12 @@ main {
 
   padding: 0;
 
+  #freewall {
+    // border-bottom: 5px solid #333;
+    // border-top: 5px solid #333;
+    padding-bottom: 3px;
+  }
+
   .brick {
     position: relative;
     img { width: 100%; }

@@ -2,14 +2,6 @@ header {
   @extend .row;
   @extend .expanded;
 
-  &::after {
-    width: 100%;
-    border-bottom: 3px solid #555;
-    border-top: 3px solid #555;
-    position: absolute;
-    bottom: 0;
-  }
-
   width: 100%;
   padding: 1rem 0;
   // margin-bottom: 1rem;
@@ -22,6 +14,7 @@ header {
     margin-top: 0;
     margin-bottom: 0;
     font-weight: 300;
+    font-size: 2.5rem;
   }
 
   nav {
