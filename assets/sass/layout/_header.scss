@@ -34,9 +34,24 @@ header {
         font-weight: 300;
         padding: 1rem 1rem;
         margin: 0;
+        transition: .25s;
+        // background: $text-color;
+        // color: #fff;
+        // min-width: 15vw;
+        color: $text-color;
+
         font-family: $title-font-stack;
         text-transform: uppercase;
         letter-spacing: 1px;
+
+        @include on-event {
+          // background: #fff;
+          // color: $text-color;
+          // box-shadow: inset 0 0 0 2px $text-color;
+          background: $text-color;
+          color: #fff;
+          transform: scale(1.07);
+        }
       }
     }
   }
@@ -66,7 +81,7 @@ header.pages {
 
 header.landing {
   $height: 95vh;
-  $opacity: .95;
+  $opacity: .9;
 
   height: $height;
   background: rgba(255,255,255,$opacity);
@@ -98,23 +113,8 @@ header.landing {
     @extend .row;
     text-align: center;
 
-    .menu li {
-      a {
-        font-weight: 300;
-        font-size: 3vh;
-        transition: .25s;
-        // background: $text-color;
-        // color: #fff;
-        // min-width: 15vw;
-        color: $text-color;
-        @include on-event {
-          // background: #fff;
-          // color: $text-color;
-          // box-shadow: inset 0 0 0 2px $text-color;
-          background: $text-color;
-          color: #fff;
-        }
-      }
+    .menu li a {
+      font-size: 3vh;
     }
   }
 }

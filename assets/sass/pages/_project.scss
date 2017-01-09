@@ -31,8 +31,10 @@ main.project-main {
     img {
       opacity: 1;
       transition: .3s;
+      overflow: hidden;
       @include on-event {
         opacity: .5;
+        transform: scale(.95);
       }
     }
   }
