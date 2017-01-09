@@ -36,9 +36,13 @@ header {
 }
 
 header.pages {
-  h1 {
+  .site-title {
     @extend .columns;
     @extend .large-2;
+
+    img {
+      height: 48px;
+    }
   }
 
   nav {
@@ -72,7 +76,7 @@ header.landing {
     z-index: -1;
   }
 
-  h1 {
+  .site-title {
     @extend .row;
     text-align: center;
     img {

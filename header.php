@@ -26,11 +26,11 @@
 
 	<?php if (is_front_page() && is_home()) : ?>
 	<header id='masthead' class='landing' role='banner'>
-		<h1 class='site-title'>
+		<div class='site-title'>
 			<a href='<?php echo esc_url(home_url('/')); ?>' rel='home'>
 				<img src='<?php echo get_template_directory_uri() . '/dist/imgs/logo.png' ?>' />
 			</a>
-		</h1>
+		</div>
 		<nav id='site-navigation' role='navigation'>
 			<?php wp_nav_menu(array('theme_location' => 'menu-1', 'menu_id' => 'primary-menu' )) ?>
 		</nav>
@@ -39,9 +39,11 @@
 	<header id='masthead' class='pages' role='banner'>
 		<div class='row'>
 			<div class='pages'>
-				<p class='site-title'>
-					<a href='<?php echo esc_url(home_url('/')); ?>' rel='home'><?php bloginfo('name'); ?></a>
-				</p>
+				<div class='site-title'>
+					<a href='<?php echo esc_url(home_url('/')); ?>' rel='home'>
+						<img src='<?php echo get_template_directory_uri() . '/dist/imgs/logo.png' ?>' />
+					</a>
+				</div>
 				<nav id='site-navigation' role='navigation'>
 					<?php wp_nav_menu(array('theme_location' => 'menu-1', 'menu_id' => 'primary-menu' )) ?>
 				</nav>
