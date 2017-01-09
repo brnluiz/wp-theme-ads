@@ -41,7 +41,6 @@ main.project-main {
 
   .gallery {
     @extend .row;
-    margin-top: 2rem;
   }
 
   .video {
@@ -50,6 +49,7 @@ main.project-main {
     position: relative;
     height: 0;
     padding-bottom: 56.25%;
+    margin-bottom: 2rem;
 
     iframe {
       position: absolute;

@@ -70,12 +70,12 @@ header.header-landing {
   background: rgba(255,255,255,$header-opacity);
   margin-bottom: 3px;
 
-  &:before {
+  .header-background {
     position: absolute;
     bottom: 0;
     height: $header-height;
     width: 100vw;
-    background-image: url('./dist/imgs/header.jpg');
+    // background-image: url('./dist/imgs/header.jpg');
     background-repeat: none;
     background-attachment: fixed;
     background-position: center center;

@@ -18,11 +18,13 @@
  */
 function ads_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'ads_custom_header_args', array(
-		'default-image'          => '',
+		'default-image'          => get_template_directory_uri() . '/dist/imgs/header.jpg',
 		'default-text-color'     => '000000',
-		'width'                  => 1000,
-		'height'                 => 250,
+		'width'                  => 16000,
+		'height'                 => 9000,
 		'flex-height'            => true,
+		'flex-width'						 => true,
+		'uploads'       				 => true,
 		'wp-head-callback'       => 'ads_header_style',
 	) ) );
 }

@@ -26,6 +26,7 @@
 
 	<?php if (is_front_page() && is_home()) : ?>
 	<header id='masthead' class='header-landing' role='banner'>
+		<div class='header-background' style='background-image:url(<?php header_image() ?>)'></div>
 		<div class='site-title'>
 			<a href='<?php echo esc_url(home_url('/')); ?>' rel='home'>
 				<img src='<?php echo get_template_directory_uri() . '/dist/imgs/logo.png' ?>' />
