@@ -7,7 +7,7 @@
  * @package ads
  */
 
-$widths = array('300px', '350px');
+$widths = array('300px', '350px', '400px');
 shuffle($widths);
 ?>
 
