@@ -1,7 +1,7 @@
 main.project-main {
   @extend .row;
 
-  $height: 75vh;
+  $height: 70vh;
   $opacity: .85;
 
   .banner {
@@ -43,8 +43,22 @@ main.project-main {
     @extend .large-4;
   }
 
-  .thumbs {
+  .gallery {
     @extend .columns;
     @extend .large-8;
   }
+
+  .thumbs-list {
+    @extend .row;
+    @extend .small-up-1;
+    @extend .medium-up-2;
+    @extend .large-up-2;
+
+  }
+  
+  .thumbs-item {
+    @extend .column;
+    @extend .column-block;
+  }
+
 }
