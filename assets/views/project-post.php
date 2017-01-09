@@ -26,7 +26,7 @@
         <?php foreach( $images as $image ): ?>
         <div class='thumbs-item'>
           <a href="<?php echo $image['url']; ?>" data-lightbox="gallery">
-            <img src="<?php echo $image['sizes']['large']; ?>" alt="<?php echo $image['alt']; ?>" />
+            <img src="<?php echo $image['sizes']['medium_large']; ?>" alt="<?php echo $image['alt']; ?>" />
           </a>
           <?php // echo $image['caption']; ?>
         </div>
