@@ -24,7 +24,6 @@ header {
   .menu .menu-item, .menu .social-item {
     list-style: none;
     display: inline-block;
-
   }
 
   .menu .menu-item a {
@@ -76,6 +75,16 @@ header.header-pages {
     ul {
       float: right;
       text-align: right;
+    }
+    @include breakpoint(medium down) {
+      ul {
+        float: left;
+        text-align: left;
+        margin-top: 1rem;
+      }
+      .menu .menu-item {
+        display: block;
+      }
     }
   }
 

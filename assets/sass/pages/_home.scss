@@ -95,11 +95,12 @@ header.header-landing {
     }
   }
   
-  .site-nav {
+  nav {
     // @extend .row;
     // @extend .column;
     text-align: center;
     margin: 0 auto;
+    margin-top: 1.5rem;
 
     .menu li a {
       font-size: 3vh;
