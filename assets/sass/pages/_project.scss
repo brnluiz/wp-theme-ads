@@ -27,6 +27,8 @@ main.project-main {
   .thumbs-item {
     @extend .column;
     @extend .column-block;
+    padding: 3px;
+    margin: 0;
 
     img {
       opacity: 1;
