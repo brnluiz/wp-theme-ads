@@ -7,4 +7,46 @@ main {
   @extend .expanded;
 
   padding: 0 1rem;
+
+  .brick {
+    position: relative;
+    img { width: 100%; }
+
+    .paint {
+      transition: opacity .2s ease-in-out;
+      position: absolute;
+      bottom: 0;
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: #fff;
+      background: rgba(255,255,255,.80);
+      height: 100%;
+      width: 100%;
+      vertical-align: middle;
+      padding: .5rem;
+      opacity: 0;
+
+
+      title {
+        transition: .3s;
+        position: absolute;
+        bottom: -1rem;
+        left: 1rem;
+        width: 200px;
+        color: $text-color;
+        display: block;
+      }
+    }
+
+    a {
+      @include on-event {
+        .paint {
+          opacity: 1;
+          title {
+            bottom: 1rem;
+          }
+        }
+      }
+    }
+  }
 }

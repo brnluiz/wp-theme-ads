@@ -16,6 +16,8 @@
     animate: true,
     cellW: 150,
     cellH: 'auto',
+    // gutterX: 0,
+    // gutterY: 0,
     onResize: function() {
       wall.fitWidth();
     }

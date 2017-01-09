@@ -14,42 +14,21 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+		<main id='main' class='site-main' role='main'>
+			<?php if ( have_posts() ) : ?>
+			<div id='freewall' class='free-wall'>
+				<?php 
+				query_posts(array(
+					'post_type'=>array('project')
+				));
 
-		<?php
-		if ( have_posts() ) :
-
-			if ( is_home() && ! is_front_page() ) : ?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
-
-			<?php
-			endif;
-
-			/* Start the Loop */
-			while ( have_posts() ) : the_post();
-
-				/*
-				 * Include the Post-Format-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
-				get_template_part( 'assets/views/content', get_post_format() );
-
-			endwhile;
-
-			the_posts_navigation();
-
-		else :
-
-			get_template_part( 'assets/views/content', 'none' );
-
-		endif; ?>
-
+				while (have_posts()) : the_post();
+		      get_template_part('assets/views/project', get_post_format());
+		    endwhile; 
+		    ?>
+			</div>
+			<?php endif ?>
 		</main><!-- #main -->
-	</div><!-- #primary -->
 
 <?php
 // get_sidebar();
