@@ -4,15 +4,15 @@ header {
 
   &::after {
     width: 100%;
-    border-bottom: 3px solid #e4b6e6;
-    border-top: 3px solid #00c4ff;
+    border-bottom: 3px solid #555;
+    border-top: 3px solid #555;
     position: absolute;
     bottom: 0;
   }
 
   width: 100%;
   padding: 1rem 0;
-  margin-bottom: 1rem;
+  // margin-bottom: 1rem;
   overflow: hidden;
   position: relative;
 
