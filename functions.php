@@ -44,8 +44,9 @@ function ads_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'menu-1' => esc_html__( 'Primary', 'ads' ),
-	) );
+		'landing' => esc_html__( 'Landing', 'ads' ),
+		'general' => esc_html__( 'General Pages', 'ads' ),
+	));
 
 	/*
 	 * Switch default core markup for search form, comment form, and comments
@@ -57,16 +58,7 @@ function ads_setup() {
 		'comment-list',
 		'gallery',
 		'caption',
-	) );
-
-	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'ads_custom_background_args', array(
-		'default-color' => 'ffffff',
-		'default-image' => '',
-	) ) );
-
-	// Add theme support for selective refresh for widgets.
-	add_theme_support( 'customize-selective-refresh-widgets' );
+	));
 }
 endif;
 add_action( 'after_setup_theme', 'ads_setup' );
@@ -82,24 +74,6 @@ function ads_content_width() {
 	$GLOBALS['content_width'] = apply_filters( 'ads_content_width', 640 );
 }
 add_action( 'after_setup_theme', 'ads_content_width', 0 );
-
-/**
- * Register widget area.
- *
- * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
- */
-function ads_widgets_init() {
-	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'ads' ),
-		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'ads' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
-}
-add_action( 'widgets_init', 'ads_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
@@ -144,4 +118,6 @@ require get_template_directory() . '/inc/customizer.php';
  */
 require get_template_directory() . '/inc/jetpack.php';
 
-require_once get_template_directory() . '/inc/tgm-plugin-activation.php';
+require get_template_directory() . '/inc/tgm-plugin-activation.php';
+
+require get_template_directory() . '/inc/custom-dashboard.php';
