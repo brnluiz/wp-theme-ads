@@ -35,5 +35,7 @@
     </div>
   </div>
 
+  <?php get_template_part('assets/views/editbar') ?>
+
 </article>
 <?php endif; ?>

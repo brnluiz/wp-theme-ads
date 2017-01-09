@@ -21,4 +21,5 @@ shuffle($widths);
     <!-- <img src='http://localhost:8000/example/i/photo/1.jpg' > -->
   </a>
 </article>
+
 <?php endif; ?>
