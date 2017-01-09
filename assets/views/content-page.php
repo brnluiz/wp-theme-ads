@@ -9,31 +9,33 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id='post-<?php the_ID(); ?>' <?php post_class(); ?>>
 	<div class='banner'>
     <div class='banner-background'></div>
     <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
   </div>
 
-	<div class="entry-content">
-		<?php
-			the_content();
+	<div class='row'>
+		<div class='entry-content'>
+			<?php
+				the_content();
 
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'ads' ),
-				'after'  => '</div>',
-			) );
-		?>
-	</div><!-- .entry-content -->
+				wp_link_pages( array(
+					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'ads' ),
+					'after'  => '</div>',
+				) );
+			?>
+		</div>
+	</div>
 
 	<?php if ( get_edit_post_link() ) : ?>
-		<footer class="entry-footer">
+		<footer class='entry-footer'>
 			<?php
 				edit_post_link(
 					sprintf(
 						/* translators: %s: Name of current post */
 						esc_html__( 'Edit %s', 'ads' ),
-						the_title( '<span class="screen-reader-text">"', '"</span>', false )
+						the_title( '<span class="screen-reader-text">', '</span>', false )
 					),
 					'<span class="edit-link">',
 					'</span>'

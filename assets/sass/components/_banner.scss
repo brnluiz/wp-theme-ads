@@ -1,5 +1,5 @@
 $banner-height: 70vh;
-$banner-opacity: .8;
+$banner-opacity: .85;
 
 .banner {
   @extend .row;
@@ -16,6 +16,7 @@ $banner-opacity: .8;
     left: 1rem;
     font-size: 3rem;
     text-transform: uppercase;
+    font-family: $title-font-stack;
 
     a {
       display: block;

@@ -52,7 +52,7 @@ gulp.task('build-scss', () => gulp
     .pipe(autoprefixer({
       browsers: ['last 3 versions']
     }))
-    .pipe(cleanCSS())
+    .pipe(cleanCSS({processImport: false}))
   .pipe(sourcemaps.write(configs.scss.dest))
   .pipe(gulp.dest(configs.scss.dest))
 );

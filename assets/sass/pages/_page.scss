@@ -6,3 +6,9 @@ $banner-height: 40vh;
     height: $banner-height;
   }
 }
+
+.entry-content {
+  @extend .columns;
+  @extend .large-10;
+  @extend .large-offset-1;
+}
