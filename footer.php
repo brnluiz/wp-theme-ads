@@ -20,9 +20,9 @@
       <span><a href='mailto:contato@adsstudio.net'>contato@adsstudio.net</a></span>
       <span><a href='tel:+5547991542603'>+55 (47) 99154-2603</a></span>
     </div>
-    <!-- <div class="design-info footer-info">
+    <div class="design-info footer-info">
 			<a href="https://brunoluiz.net/" rel="designer">Designed by Bruno Luiz Silva</a>
-		</div> -->
+		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
