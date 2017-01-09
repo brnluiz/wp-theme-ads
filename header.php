@@ -33,11 +33,12 @@
 			</a>
 		</div>
 		<nav id='landing-nav' class='site-nav' role='navigation'>
-			<ul>
-				<?php wp_nav_menu(array('theme_location' => 'landing', 'container' => false )) ?>
+			<ul class='menu'>
+				<?php get_template_part('./assets/views/nav') ?>
 			</ul>
 		</nav>
 	</header>
+	
 	<?php else: ?>
 	<header id='masthead' class='header-pages' role='banner'>
 		<div class='site-title'>
@@ -51,9 +52,7 @@
 			</a>
 		</div>
 		<nav id='site-nav' class='site-nav' role='navigation'>
-			<ul class='menu'>
-				<?php wp_nav_menu(array('theme_location' => 'general', 'container' => false, 'items_wrap' => '%3$s' )) ?>
-			</ul>
+			<?php get_template_part('./assets/views/nav') ?>
 		</nav>
 	</header>
 	<?php endif; ?>
