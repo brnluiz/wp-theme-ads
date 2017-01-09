@@ -2,8 +2,8 @@
 // This file contains all application-wide Sass variables.
 // -----------------------------------------------------------------------------
 
-@import url('https://fonts.googleapis.com/css?family=Fjalla+One');
-$text-font-stack:  'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One|Lato:300,400,700');
+$text-font-stack:  'Lato', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
 $title-font-stack: 'Fjalla One', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
 $code-font-stack:  'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
 

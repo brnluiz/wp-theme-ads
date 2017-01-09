@@ -34,6 +34,9 @@ header {
         font-weight: 300;
         padding: 1rem 1rem;
         margin: 0;
+        font-family: $title-font-stack;
+        text-transform: uppercase;
+        letter-spacing: 1px;
       }
     }
   }
