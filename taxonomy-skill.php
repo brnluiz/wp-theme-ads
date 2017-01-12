@@ -28,6 +28,8 @@ get_header();
     <?php else:
       get_template_part( 'assets/views/content', 'none' );
     endif; ?>
+
+    <?php get_template_part('assets/views/pagination'); ?>
   </main><!-- #main -->
 
 <?php
