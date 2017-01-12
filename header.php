@@ -32,10 +32,8 @@
 				<img src='<?php echo get_template_directory_uri() . '/dist/imgs/logo.png' ?>' />
 			</a>
 		</div>
-		<nav id='landing-nav' class='site-nav' role='navigation'>
-			<ul class='menu'>
-				<?php get_template_part('./assets/views/nav') ?>
-			</ul>
+		<nav id='landing-nav' class='site-nav' role='navigation'><ul class='menu'>
+			<?php get_template_part('./assets/views/nav') ?>
 		</nav>
 	</header>
 	
