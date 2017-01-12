@@ -16,7 +16,7 @@ get_header();
 
 ?>
 
-  <main id='main' class='site-main' role='main'>
+  <main id='main' class='skills-main' role='main'>
     <?php if (have_posts()) : ?>
     
     <div id='freewall' class='free-wall'>

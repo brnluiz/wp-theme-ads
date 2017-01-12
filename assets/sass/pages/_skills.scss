@@ -1,0 +1,9 @@
+main.skills-main {
+  @include grid-row;
+
+  padding: 0;
+
+  #freewall {
+    padding-bottom: 3px;
+  }
+}
