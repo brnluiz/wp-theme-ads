@@ -70,6 +70,23 @@ main.project-main {
 
 }
 
+.brick-1 {
+  width: 20%;
+}
+
+.brick-2 {
+  width: 25%;
+}
+.brick-3 {
+  width: 30%;
+}
+
+.brick {
+  @include breakpoint(small down) {
+    width: 100%
+  }
+}
+
 // $banner-opacity: .5;
 // .project-main .banner {
 //   background: rgba(255,255,255,$banner-opacity);

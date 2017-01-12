@@ -7,13 +7,12 @@
  * @package ads
  */
 
-// FIXME: On mobile
-$widths = array('20%', '25%', '30%');
-shuffle($widths);
+$size = array('brick-1', 'brick-2', 'brick-3');
+shuffle($size);
 ?>
 
 <?php if (get_post_type() == 'project' && has_post_thumbnail()) : ?>
-<article id="post-<?php the_ID(); ?>" class='brick' style='width:<?=$widths[0]?>;'>
+<article id="post-<?php the_ID(); ?>" class='brick <?=$size[0]?>'>
   <a href='<?php echo esc_url(get_permalink()) ?>' >
     <div class='paint'>
       <?php the_title( '<title class="entry-title">', '</title>' ) ?>
