@@ -17,7 +17,7 @@
 		<div class="contact-info footer-info">
       <span>ADS Studio</span>
       <!-- <span>Blumenau, Brazil</span> -->
-      <span><a href='mailto:contato@andrediogo.arq.br'>contato@andrediogo.arq.br</a></span>
+      <span><a href='mailto:contato@andrediogo.com'>contato@andrediogo.com</a></span>
       <span><a href='tel:+5547991542603'>+55 (47) 99154-2603</a></span>
     </div>
     <div class="design-info footer-info">

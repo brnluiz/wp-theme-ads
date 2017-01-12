@@ -1,5 +1,9 @@
 $banner-height: 40vh;
 
+.page-main {
+  @include grid-row;
+}
+
 .banner-page {
   height: $banner-height;
   .banner-background {
@@ -17,10 +21,6 @@ $banner-height: 40vh;
   }
 }
 
-.entry-content {
-}
-
-.editbar {
-  @include grid-row;
-  @include grid-column;
+.edit-bar {
+  @include grid-column-row;
 }
