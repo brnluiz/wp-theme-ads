@@ -93,6 +93,14 @@ function ads_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'ads_scripts' );
 
+function ads_home_contents($query) {
+	if (!$query->is_home())
+		return $query;
+
+  $query->set( 'post_type', 'project' );
+}
+add_action( 'pre_get_posts', 'ads_home_contents' );
+
 /**
  * Implement the Custom Header feature.
  */
