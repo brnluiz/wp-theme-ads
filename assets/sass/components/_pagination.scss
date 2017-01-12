@@ -1,0 +1,29 @@
+.pagination {
+  @include pagination-container;
+
+  font-family: $title-font-stack;
+  text-align: center;
+
+  li a, .current {
+    font-weight: 300;
+    padding: 1rem 1rem;
+    margin: 0;
+    transition: .25s;
+    color: $text-color;
+
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    @include on-event {
+      background: $text-color;
+      color: #fff;
+      transform: scale(1.07);
+    }
+  }
+
+  .current {
+    background: $text-color;
+    color: #fff;
+    transform: scale(1.07);
+  }
+}
