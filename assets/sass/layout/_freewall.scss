@@ -1,6 +1,9 @@
 .brick {
   position: relative;
-  img { width: 100%; }
+  img { 
+    width: 100%;
+    display: block;
+  }
 
   @include breakpoint(small down) {
     width: 100%
@@ -19,7 +22,7 @@
     vertical-align: middle;
     padding: .5rem;
     opacity: 0;
-
+    display: block;
 
     title {
       transition: .3s;
@@ -35,6 +38,7 @@
   }
 
   a {
+    display: block;
     @include on-event {
       .paint {
         opacity: 1;
@@ -46,6 +50,16 @@
   }
 }
 
-.brick-1 { width: 20%; }
-.brick-2 { width: 25%; }
-.brick-3 { width: 30%; }
+// .brick-1 { width: 16.666%; }
+.brick-1 { 
+  width: 20%;
+  @include breakpoint(small down) { width: 100% }
+}
+.brick-2 { 
+  width: 20%; 
+  @include breakpoint(small down) { width: 100% }
+}
+.brick-3 { 
+  width: 20%; 
+  @include breakpoint(small down) { width: 100% }
+}

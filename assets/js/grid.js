@@ -6,9 +6,13 @@
 
   var wall = new Freewall('#freewall');
   wall.reset({
+    fixSize: false,
     selector: '.brick',
     animate: true,
-    cellW: 150,
+    cellW: function(container) {
+      console.log(container);
+      return container/5;
+    },
     cellH: 'auto',
     gutterX: 3,
     gutterY: 3,
@@ -21,5 +25,4 @@
     wall.fitWidth();
   });
   wall.fitWidth();
-  $(window).trigger("resize");
 })();
