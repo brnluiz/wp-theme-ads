@@ -3,8 +3,7 @@
 // -----------------------------------------------------------------------------
 
 footer {
-  @include grid-row;
-  @include grid-column;
+  @include grid-column-row;
 
   text-align: center;
   font-weight: 400;
@@ -35,4 +34,8 @@ footer {
   }
 
   a { color: #666; }
+}
+
+footer:last-child:not(:first-child) {
+  float: none;
 }

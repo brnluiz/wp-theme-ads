@@ -20,4 +20,6 @@
   images.find('img').load(function() {
     wall.fitWidth();
   });
+  wall.fitWidth();
+  $(window).trigger("resize");
 })();
