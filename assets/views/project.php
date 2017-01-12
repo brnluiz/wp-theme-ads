@@ -7,7 +7,8 @@
  * @package ads
  */
 
-$widths = array('300px', '350px', '400px');
+// FIXME: On mobile
+$widths = array('20%', '25%', '30%');
 shuffle($widths);
 ?>
 

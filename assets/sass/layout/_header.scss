@@ -1,6 +1,5 @@
 header {
   padding: 1rem 0;
-  // margin-bottom: 1rem;
   overflow: hidden;
   position: relative;
 
@@ -56,11 +55,17 @@ header {
   }
 }
 
-header.header-pages {
-  @extend .row;
+.header-pages {
+  @include grid-row;
+
+  padding: 1.75rem 0;
 
   .site-title {
-    @extend .columns, .large-4;
+    @include grid-column(4);
+
+    @include breakpoint(medium down) {
+      @include grid-col-size(100%);
+    }
 
     img {
       height: 48px;
@@ -71,24 +76,23 @@ header.header-pages {
   }
 
   nav {
-    @extend .columns, .large-8;
+    @include grid-column(8);
+
     ul {
       float: right;
       text-align: right;
     }
+    
     @include breakpoint(medium down) {
+      @include grid-col-size(100%);
       ul {
-        float: left;
+        float: none;
         text-align: left;
         margin-top: 1rem;
-      }
-      .menu .menu-item {
-        display: block;
       }
     }
   }
 
-  padding: 1.75rem 0;
 }
 
 .screen-reader-text {

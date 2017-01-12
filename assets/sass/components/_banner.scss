@@ -2,8 +2,7 @@ $banner-height: 70vh;
 $banner-opacity: .85;
 
 .banner {
-  @extend .row;
-  @extend .column;
+  @include grid-column-row;
 
   margin-bottom: 2rem;
 
@@ -30,6 +29,7 @@ $banner-opacity: .85;
   .banner-background {
     position: absolute;
     bottom: 0;
+    left: 0;
     height: $banner-height;
     width: 100%;
     background-image: url('./dist/imgs/header.jpg');

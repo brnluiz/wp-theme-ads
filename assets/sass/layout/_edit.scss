@@ -1,5 +1,6 @@
 .edit-bar {
-  @extend .row;
+  @include grid-row;
+  @include grid-column;
   text-align: center;
   font-weight: 700;
 }

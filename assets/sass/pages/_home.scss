@@ -3,7 +3,7 @@
 // -----------------------------------------------------------------------------
 
 main.site-main {
-  @extend .row;
+  @include grid-row(null, null, expand);
   // @extend .expanded;
 
   padding: 0;
@@ -59,9 +59,8 @@ main.site-main {
   }
 }
 
-header.header-landing {
-  @extend .row;
-  @extend .expanded;
+.header-landing {
+  @include grid-row(null, null, expand);
 
   $header-height: 95vh;
   $header-opacity: .9;
@@ -84,10 +83,9 @@ header.header-landing {
   }
 
   .site-title {
-    // @extend .row;
-    // @extend .column;
+    @include grid-column-row;
+    // @include grid-column;
     text-align: center;
-    margin: 0 auto;
     img {
       margin-top: 10vh;
       height: 50vh;
@@ -96,14 +94,18 @@ header.header-landing {
   }
   
   nav {
-    // @extend .row;
-    // @extend .column;
+    @include grid-column-row;
+    // @include grid-column;
     text-align: center;
-    margin: 0 auto;
+    // margin: 0 auto;
     margin-top: 1.5rem;
 
     .menu li a {
       font-size: 3vh;
     }
+  }
+
+  nav:last-child:not(:first-child) {
+    float: none;
   }
 }

@@ -1,6 +1,6 @@
 $banner-height: 40vh;
 
-.page > .banner {
+.banner-page {
   height: $banner-height;
   .banner-background {
     height: $banner-height;
@@ -8,7 +8,19 @@ $banner-height: 40vh;
 }
 
 .entry-content {
-  // @extend .columns;
-  @extend .large-8;
-  @extend .large-offset-2;
+  @include grid-column(8);
+  @include grid-column-offset(2);
+
+  @include breakpoint(medium down) {
+    @include grid-column-size(100%);
+    @include grid-column-offset(0);
+  }
+}
+
+.entry-content {
+}
+
+.editbar {
+  @include grid-row;
+  @include grid-column;
 }

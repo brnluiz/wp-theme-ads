@@ -43,7 +43,7 @@
 	<header id='masthead' class='header-pages' role='banner'>
 		<div class='site-title'>
 			<a href='<?php echo esc_url(home_url('/')); ?>' rel='home'>
-				<img src='<?php echo get_template_directory_uri() . '/dist/imgs/logo.png' ?>' />
+				<img src='<?php echo get_template_directory_uri() . '/dist/imgs/logo.thumb.png' ?>' />
 				<ul class='menu'>
 					<li class='social-item'><a href='#'><i class='fa fa-pinterest'></i></a></li>
 					<li class='social-item'><a href='#'><i class='fa fa-instagram'></i></a></li>
