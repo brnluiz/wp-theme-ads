@@ -99,8 +99,16 @@ function ads_home_contents($query) {
 	}
   
   $query->set('post_type', 'project');
+  $query->set('orderby', 'rand');
+  $query->set('tax_query', array(
+		array(
+			'taxonomy' => 'skill',
+			'field'    => 'slug',
+			'terms'    => 'projetos',
+		)));
 }
 add_action( 'pre_get_posts', 'ads_home_contents' );
+
 
 /**
  * Implement the Custom Header feature.
