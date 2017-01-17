@@ -104,7 +104,7 @@ function ads_home_contents($query) {
 		array(
 			'taxonomy' => 'skill',
 			'field'    => 'slug',
-			'terms'    => 'projetos',
+			'terms'    => array('projetos', 'colaboracoes')
 		)));
 }
 add_action( 'pre_get_posts', 'ads_home_contents' );
